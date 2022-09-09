@@ -24,3 +24,31 @@ while not at_goal():
     else:
         move()
         turn_right()
+
+        
+###Second Solution###
+def turn_right():
+    turn_left()
+    turn_left()
+    turn_left()
+
+def deadEnd():
+    if (front_is_clear() == False) and (wall_on_right() == True):
+        turn_left()
+        if not front_is_clear():
+            turn_left()
+            move()
+            return True
+            
+while not at_goal():
+    if front_is_clear() and :
+        move()
+        if deadEnd():
+            while right_is_clear():
+                turn_right()
+                move()
+    elif right_is_clear():
+        turn_right()
+        move()
+    else:
+        turn_left()
